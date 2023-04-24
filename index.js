@@ -96,7 +96,7 @@ rock.addEventListener('click', ()=>{
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'rock'
     userImage.src = 'userRock.svg'
-    computerImageSource()
+    computerImageSource(computerOptions[computerDecision])
     const res = gameRes(userDecision, computerOptions[computerDecision])
 })
 paper.addEventListener('click', ()=>{
@@ -104,7 +104,7 @@ paper.addEventListener('click', ()=>{
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'paper'
     userImage.src = 'userPaper.svg'
-    computerImageSource()
+    computerImageSource(computerOptions[computerDecision])
     gameRes(userDecision, computerOptions[computerDecision])
 })
 scissor.addEventListener('click', ()=>{
@@ -112,6 +112,6 @@ scissor.addEventListener('click', ()=>{
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'scissor'
     userImage.src = 'userScissor.svg'
-    computerImageSource()
+    computerImageSource(computerOptions[computerDecision])
     gameRes(userDecision, computerOptions[computerDecision])
 })
