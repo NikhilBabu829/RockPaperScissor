@@ -77,17 +77,17 @@ const checkScore = ()=>{
     }
 }
 
-// const computerImageSource = (computerDecision)=>{
-//     if(computerDecision === 'Rock'){
-//         computerImage.src = 'computerRock.svg'
-//     }
-//     else if(computerDecision === 'Paper'){
-//         computerImage.src = 'computerPaper.svg'
-//     }
-//     else{
-//         computerImage.src = 'computerScissor.svg'
-//     }
-// }
+const computerImageSource = (computerDecision)=>{
+    if(computerDecision === 'Rock'){
+        computerImage.src = 'computerRock.svg'
+    }
+    else if(computerDecision === 'Paper'){
+        computerImage.src = 'computerPaper.svg'
+    }
+    else{
+        computerImage.src = 'computerScissor.svg'
+    }
+}
 
 rock.addEventListener('click', ()=>{
     computerOptions = ['Rock', 'Paper', 'Scissor']
@@ -95,15 +95,7 @@ rock.addEventListener('click', ()=>{
     const userDecision = 'rock'
     userImage.src = 'userRock.svg'
     const computer = computerOptions[computerDecision]
-    if(computer === 'Rock'){
-        computerImage.src = 'computerRock.svg'
-        }
-    else if(computer === 'Paper'){
-        computerImage.src = 'computerPaper.svg'
-    }
-    else{
-        computerImage.src = 'computerScissor.svg'
-    }
+    computerImageSource(computer)
     gameRes(userDecision, computer)
 })
 paper.addEventListener('click', ()=>{
