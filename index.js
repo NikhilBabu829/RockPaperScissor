@@ -89,46 +89,32 @@ const computerImageSource = (computerDecision)=>{
     }
 }
 
-rock.addEventListener('click', ()=>{
+const computer = ()=>{
     computerOptions = ['Rock', 'Paper', 'Scissor']
     computerDecision = Math.floor(Math.random() * computerOptions.length)
+    const returnValue = computerOptions[computerDecision]
+    computerImageSource(returnValue)
+    return returnValue
+}
+
+rock.addEventListener('click', ()=>{
     const userDecision = 'rock'
     userImage.src = 'userRock.svg'
-    const computer = computerOptions[computerDecision]
-    computerImageSource(computer)
-    gameRes(userDecision, computer)
+    const comp = computer()
+    computerImageSource(comp)
+    gameRes(userDecision, comp)
 })
 paper.addEventListener('click', ()=>{
-    computerOptions = ['Rock', 'Paper', 'Scissor']
-    computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'paper'
     userImage.src = 'userPaper.svg'
-    const computer = computerOptions[computerDecision]
-    if(computer === 'Rock'){
-        computerImage.src = 'computerRock.svg'
-        }
-    else if(computer === 'Paper'){
-        computerImage.src = 'computerPaper.svg'
-    }
-    else{
-        computerImage.src = 'computerScissor.svg'
-    }
-    gameRes(userDecision, computer)
+    const comp = computer()
+    computerImageSource(comp)
+    gameRes(userDecision, comp)
 })
 scissor.addEventListener('click', ()=>{
-    computerOptions = ['Rock', 'Paper', 'Scissor']
-    computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'scissor'
     userImage.src = 'userScissor.svg'
-    const computer = computerOptions[computerDecision]
-    if(computer === 'Rock'){
-        computerImage.src = 'computerRock.svg'
-        }
-    else if(computer === 'Paper'){
-        computerImage.src = 'computerPaper.svg'
-    }
-    else{
-        computerImage.src = 'computerScissor.svg'
-    }
-    gameRes(userDecision, computer)
+    const comp = computer()
+    computerImageSource(comp)
+    gameRes(userDecision, comp)
 })
