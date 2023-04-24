@@ -80,7 +80,7 @@ const checkScore = ()=>{
 }
 
 rock.addEventListener('click', ()=>{
-    computerOptions = ['rock', 'paper', 'scissor']
+    computerOptions = ['Rock', 'Paper', 'Scissor']
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'rock'
     userImage.src = 'userRock.svg'
@@ -88,7 +88,7 @@ rock.addEventListener('click', ()=>{
     const res = gameRes(userDecision, computerOptions[computerDecision])
 })
 paper.addEventListener('click', ()=>{
-    computerOptions = ['rock', 'paper', 'scissor']
+    computerOptions = ['Rock', 'Paper', 'Scissor']
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'paper'
     userImage.src = 'userPaper.svg'
@@ -96,7 +96,7 @@ paper.addEventListener('click', ()=>{
     gameRes(userDecision, computerOptions[computerDecision])
 })
 scissor.addEventListener('click', ()=>{
-    computerOptions = ['rock', 'paper', 'scissor']
+    computerOptions = ['Rock', 'Paper', 'Scissor']
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'scissor'
     userImage.src = 'userScissor.svg'
