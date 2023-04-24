@@ -79,12 +79,24 @@ const checkScore = ()=>{
     }
 }
 
+const computerImageSource = (computerDecision)=>{
+    if(computerDecision == 'Rock'){
+        computerImage.src = 'computerRock.svg'
+    }
+    else if(computerDecision == 'Paper'){
+        computerImage.src = 'computerPaper.svg'
+    }
+    else{
+        computerImage.src = 'computerScissor.svg'
+    }
+}
+
 rock.addEventListener('click', ()=>{
     computerOptions = ['Rock', 'Paper', 'Scissor']
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'rock'
     userImage.src = 'userRock.svg'
-    computerImage.src = `computer${computerOptions[computerDecision]}.svg`
+    computerImageSource()
     const res = gameRes(userDecision, computerOptions[computerDecision])
 })
 paper.addEventListener('click', ()=>{
@@ -92,7 +104,7 @@ paper.addEventListener('click', ()=>{
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'paper'
     userImage.src = 'userPaper.svg'
-    computerImage.src = `computer${computerOptions[computerDecision]}.svg`
+    computerImageSource()
     gameRes(userDecision, computerOptions[computerDecision])
 })
 scissor.addEventListener('click', ()=>{
@@ -100,6 +112,6 @@ scissor.addEventListener('click', ()=>{
     computerDecision = Math.floor(Math.random() * computerOptions.length)
     const userDecision = 'scissor'
     userImage.src = 'userScissor.svg'
-    computerImage.src = `computer${computerOptions[computerDecision]}.svg`
+    computerImageSource()
     gameRes(userDecision, computerOptions[computerDecision])
 })
