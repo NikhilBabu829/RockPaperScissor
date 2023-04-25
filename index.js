@@ -6,6 +6,7 @@ const scoreBoard = document.querySelector('.scoreBoard')
 const alertBoard = document.querySelector('.alertBoard')
 const userImage = document.querySelector('.userImage')
 const computerImage = document.querySelector('.computerImage')
+
 userScore = 0
 computerScore = 0
 
