@@ -4,6 +4,7 @@ body{
     width: 100%;
     background-color: #060c0e;
     overflow: hidden;
+    box-sizing: border-box;
 }
 h1{
     margin-top: 2%;
