@@ -6,7 +6,6 @@ const scoreBoard = document.querySelector('.scoreBoard')
 const alertBoard = document.querySelector('.alertBoard')
 const userImage = document.querySelector('.userImage')
 const computerImage = document.querySelector('.computerImage')
-const beatSign = document.querySelector('.beatSign')
 
 userScore = 0
 computerScore = 0
@@ -109,7 +108,6 @@ const computer = ()=>{
 }
 
 rock.addEventListener('click', ()=>{
-    beatSign.remove()
     animations()
     const userDecision = 'rock'
     userImage.src = 'userRock.svg'
