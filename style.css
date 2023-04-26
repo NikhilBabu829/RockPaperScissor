@@ -114,16 +114,16 @@ button:disabled{
     .rockbtn{
         width: 25%;
         transition: none;
-        margin-top: 2%;
+        margin-top: 10%;
     }
     .paperbtn{
         width: 25%;
         transition: none;
-        margin-top: 2%;
+        margin-top: 10%;
     }
     .scissorbtn{
         width: 25%;
         transition: none;
-        margin-top: 2%;
+        margin-top: 10%;
     }
 }
