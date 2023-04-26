@@ -97,6 +97,9 @@ button:disabled{
     opacity: -1;
 }
 @media (max-width: 960px) {
+    body{
+        overflow: hidden;
+    }
     h1{
         margin-top: 5%;
     }
