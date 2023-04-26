@@ -98,7 +98,7 @@ button:disabled{
     opacity: -1;
 }
 @media (max-width: 960px) {
-    body{
+    html{
         overflow: hidden;
     }
     h1{
@@ -114,14 +114,11 @@ button:disabled{
     }
     .rockbtn{
         width: 25%;
-        transition: none;
     }
     .paperbtn{
         width: 25%;
-        transition: none;
     }
     .scissorbtn{
         width: 25%;
-        transition: none;
     }
 }
