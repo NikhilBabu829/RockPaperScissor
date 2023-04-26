@@ -98,7 +98,7 @@ button:disabled{
 }
 @media (max-width: 960px) {
     h1{
-        margin-top: 10%;
+        margin-top: 5%;
     }
     .decisionSection{
         position: static;
