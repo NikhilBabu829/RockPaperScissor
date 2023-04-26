@@ -12,6 +12,15 @@ computerScore = 0
 
 scoreBoard.innerHTML = `${userScore} / ${computerScore}`
 
+// animation 
+
+const animations = ()=>{
+    gsap.fromTo('.userImage', {opacity : 0, x : -700}, {opacity : 1, x : 0, duration : 1})
+    gsap.fromTo('.computerImage', {opacity : 0, x : 700}, {opacity : 1, x : 0, duration : 1})
+}
+
+
+// game functions
 const gameRes = (userDecision, computerDecision)=>{
     const user = userDecision.toLowerCase()
     const computer = computerDecision.toLowerCase()
@@ -99,6 +108,7 @@ const computer = ()=>{
 }
 
 rock.addEventListener('click', ()=>{
+    animations()
     const userDecision = 'rock'
     userImage.src = 'userRock.svg'
     const comp = computer()
@@ -106,6 +116,7 @@ rock.addEventListener('click', ()=>{
     gameRes(userDecision, comp)
 })
 paper.addEventListener('click', ()=>{
+    animations()
     const userDecision = 'paper'
     userImage.src = 'userPaper.svg'
     const comp = computer()
@@ -113,6 +124,7 @@ paper.addEventListener('click', ()=>{
     gameRes(userDecision, comp)
 })
 scissor.addEventListener('click', ()=>{
+    animations()
     const userDecision = 'scissor'
     userImage.src = 'userScissor.svg'
     const comp = computer()
